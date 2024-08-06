@@ -19,6 +19,13 @@ func outputJSON(stdout io.Writer, members []*github.Member) error {
 	return nil
 }
 
+func loginAndName(m *github.Member) string {
+	if m.Name == "" || m.Name == m.Login {
+		return m.Login
+	}
+	return fmt.Sprintf("%s (%s)", m.Login, m.Name)
+}
+
 func outputTable(stdout io.Writer, members []*github.Member) {
 	builder := &strings.Builder{}
 	builder.Grow(56 + len(members)*50) //nolint:mnd
@@ -34,7 +41,7 @@ func outputTable(stdout io.Writer, members []*github.Member) {
 			rank = i + 1
 			prevNumOfFollowers = m.NumOfFollowers
 		}
-		fmt.Fprintf(builder, "%d | [%s (%s)](https://github.com/%s) | %d\n", rank, m.Login, m.Name, m.Login, m.NumOfFollowers)
+		fmt.Fprintf(builder, "%d | [%s](https://github.com/%s) | %d\n", rank, loginAndName(m), m.Login, m.NumOfFollowers)
 		prevRank = rank
 	}
 	fmt.Fprint(stdout, builder.String())
