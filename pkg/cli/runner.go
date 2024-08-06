@@ -29,20 +29,10 @@ func (r *Runner) Run(ctx context.Context, args ...string) error {
 		compiledDate = time.Now()
 	}
 	app := cli.App{
-		Name:     "ghomfc",
-		Usage:    "",
-		Version:  r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
-		Compiled: compiledDate,
-		Flags: []cli.Flag{
-			&cli.StringFlag{
-				Name:  "log-level",
-				Usage: "log level",
-			},
-			&cli.StringFlag{
-				Name:  "log-color",
-				Usage: "Log color. One of 'auto' (default), 'always', 'never'",
-			},
-		},
+		Name:                 "ghomfc",
+		Usage:                "GitHub Organization Members' Followers Counter",
+		Version:              r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
+		Compiled:             compiledDate,
 		EnableBashCompletion: true,
 		Commands: []*cli.Command{
 			(&versionCommand{}).command(),

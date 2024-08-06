@@ -13,7 +13,7 @@ type Member struct {
 	NumOfFollowers int    `json:"number_of_followers"`
 }
 
-func (c *Client) ListOrgMembers(ctx context.Context, org string) ([]*Member, error) { //nolint:funlen,cyclop
+func (c *Client) ListOrgMembers(ctx context.Context, org string) ([]*Member, error) {
 	/*
 		query ($org: String!, $after: String) {
 		  organization(login: $org) {
