@@ -25,3 +25,10 @@ jobs:
         env:
           AQUA_GITHUB_TOKEN: ${{github.token}}
       - run: go test -v ./... -race -covermode=atomic
+      - run: go run ./cmd/ghomfc run --help
+      - run: go run ./cmd/ghomfc run aquaproj
+        env:
+          GITHUB_TOKEN: ${{github.token}}
+      - run: go run ./cmd/ghomfc run --format table aquaproj
+        env:
+          GITHUB_TOKEN: ${{github.token}}
