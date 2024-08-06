@@ -47,7 +47,7 @@ func Run(ctx context.Context, stdout io.Writer, gh GitHub, param *Param) error {
 		fmt.Fprintln(stdout, "Rank | Login (Name) | Number of Followers")
 		fmt.Fprintln(stdout, "--- | --- | ---")
 		for i, m := range members {
-			fmt.Fprintf(stdout, "%d | %s (%s) | %d\n", i+1, m.Login, m.Name, m.NumOfFollowers)
+			fmt.Fprintf(stdout, "%d | [%s (%s)](https://github.com/%s) | %d\n", i+1, m.Login, m.Name, m.Login, m.NumOfFollowers)
 		}
 		return nil
 	default:
