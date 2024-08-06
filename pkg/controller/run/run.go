@@ -46,8 +46,18 @@ func Run(ctx context.Context, stdout io.Writer, gh GitHub, param *Param) error {
 	case "table":
 		fmt.Fprintln(stdout, "Rank | Login (Name) | Number of Followers")
 		fmt.Fprintln(stdout, "--- | --- | ---")
+		prevNumOfFollowers := -1
+		prevRank := 0
 		for i, m := range members {
-			fmt.Fprintf(stdout, "%d | [%s (%s)](https://github.com/%s) | %d\n", i+1, m.Login, m.Name, m.Login, m.NumOfFollowers)
+			var rank int
+			if prevNumOfFollowers == m.NumOfFollowers {
+				rank = prevRank
+			} else {
+				rank = i + 1
+				prevNumOfFollowers = m.NumOfFollowers
+			}
+			fmt.Fprintf(stdout, "%d | [%s (%s)](https://github.com/%s) | %d\n", rank, m.Login, m.Name, m.Login, m.NumOfFollowers)
+			prevRank = rank
 		}
 		return nil
 	default:
