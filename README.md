@@ -4,27 +4,27 @@ GitHub Organization Members' Followers Counter.
 
 ## Example
 
-List members in [terraform-linters](https://github.com/terraform-linters).
+List members in [kubernetes](https://github.com/kubernetes).
 
 ```console
 $ date +%Y-%m-%dT%H:%M:%S%Z
-2024-08-06T20:13:23JST
+2024-08-06T20:54:30JST
 
-$ ghomfc run -format table terraform-linters | head -n 12
+$ ghomfc run -format table kubernetes | head -n 12
 ```
 
 Rank | Login (Name) | Number of Followers
 --- | --- | ---
-1 | [chenrui333 (Rui Chen)](https://github.com/chenrui333) | 644
-2 | [bendrucker (Ben Drucker)](https://github.com/bendrucker) | 451
-3 | [suzuki-shunsuke (Shunsuke Suzuki)](https://github.com/suzuki-shunsuke) | 319
-4 | [jpreese (John Reese)](https://github.com/jpreese) | 125
-5 | [lonegunmanb ()](https://github.com/lonegunmanb) | 120
-6 | [PatMyron (Pat Myron)](https://github.com/PatMyron) | 96
-7 | [jayzes (Jay Zeschin)](https://github.com/jayzes) | 93
-8 | [circa10a (Caleb Lemoine)](https://github.com/circa10a) | 89
-9 | [wata727 (Kazuma Watanabe)](https://github.com/wata727) | 85
-10 | [pd (Kyle Hargraves)](https://github.com/pd) | 78
+1 | [ahmetb (Ahmet Alp Balkan)](https://github.com/ahmetb) | 8082
+2 | [terrytangyuan (Yuan Tang)](https://github.com/terrytangyuan) | 3334
+3 | [feiskyer (Pengfei Ni)](https://github.com/feiskyer) | 2479
+4 | [nikhita (Nikhita Raghunath)](https://github.com/nikhita) | 1903
+5 | [thockin (Tim Hockin)](https://github.com/thockin) | 1818
+6 | [Pradumnasaraf (Pradumna Saraf)](https://github.com/Pradumnasaraf) | 1804
+7 | [gyuho (Gyuho Lee)](https://github.com/gyuho) | 1453
+8 | [AkihiroSuda (Akihiro Suda)](https://github.com/AkihiroSuda) | 1450
+9 | [Xunzhuo (Xunzhuo)](https://github.com/Xunzhuo) | 1193
+10 | [liggitt (Jordan Liggitt)](https://github.com/liggitt) | 1172
 
 ## Install
 
