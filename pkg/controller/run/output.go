@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"strings"
 
 	"github.com/suzuki-shunsuke/ghomfc/pkg/github"
 )
@@ -18,9 +19,11 @@ func outputJSON(stdout io.Writer, members []*github.Member) error {
 	return nil
 }
 
-func outputTable(stdout io.Writer, members []*github.Member) error {
-	fmt.Fprintln(stdout, "Rank | Login (Name) | Number of Followers")
-	fmt.Fprintln(stdout, "--- | --- | ---")
+func outputTable(stdout io.Writer, members []*github.Member) {
+	builder := &strings.Builder{}
+	builder.Grow(56 + len(members)*50) //nolint:mnd
+	fmt.Fprintln(builder, "Rank | Login (Name) | Number of Followers")
+	fmt.Fprintln(builder, "--- | --- | ---")
 	prevNumOfFollowers := -1
 	prevRank := 0
 	for i, m := range members {
@@ -31,10 +34,10 @@ func outputTable(stdout io.Writer, members []*github.Member) error {
 			rank = i + 1
 			prevNumOfFollowers = m.NumOfFollowers
 		}
-		fmt.Fprintf(stdout, "%d | [%s (%s)](https://github.com/%s) | %d\n", rank, m.Login, m.Name, m.Login, m.NumOfFollowers)
+		fmt.Fprintf(builder, "%d | [%s (%s)](https://github.com/%s) | %d\n", rank, m.Login, m.Name, m.Login, m.NumOfFollowers)
 		prevRank = rank
 	}
-	return nil
+	fmt.Fprint(stdout, builder.String())
 }
 
 func output(stdout io.Writer, param *Param, members []*github.Member) error {
@@ -42,7 +45,8 @@ func output(stdout io.Writer, param *Param, members []*github.Member) error {
 	case "json", "":
 		return outputJSON(stdout, members)
 	case "table":
-		return outputTable(stdout, members)
+		outputTable(stdout, members)
+		return nil
 	default:
 		return errors.New("unsupported output format")
 	}
