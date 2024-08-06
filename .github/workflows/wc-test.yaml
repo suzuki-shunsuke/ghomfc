@@ -25,3 +25,6 @@ jobs:
         env:
           AQUA_GITHUB_TOKEN: ${{github.token}}
       - run: go test -v ./... -race -covermode=atomic
+      # ghomfc can't be executed with GitHub Actions token ${{github.token}}.
+      # So run only `--help`.
+      - run: go run ./cmd/ghomfc run --help
