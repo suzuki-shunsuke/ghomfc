@@ -33,19 +33,24 @@ So you only need to put the executable binary into `$PATH`.
 
 1. [Homebrew](https://brew.sh/)
 
-Coming soon.
+```sh
+brew install suzuki-shunsuke/ghomfc/ghomfc
+```
 
 2. [Scoop](https://scoop.sh/)
 
-Coming soon.
+```sh
+scoop bucket add suzuki-shunsuke https://github.com/suzuki-shunsuke/scoop-bucket
+scoop install ghomfc
+```
 
 3. [aqua](https://aquaproj.github.io/)
 
-Coming soon.
+```sh
+aqua g -i suzuki-shunsuke/ghomfc
+```
 
 4. Download a prebuilt binary from [GitHub Releases](https://github.com/suzuki-shunsuke/ghomfc/releases) and install it into `$PATH`
-
-Coming soon.
 
 5. Go
 
