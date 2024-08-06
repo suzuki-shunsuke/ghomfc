@@ -22,12 +22,23 @@ func (rc *runCommand) command() *cli.Command {
 $ ghomfc run <GitHub Organization Name>
 `,
 		Action: rc.action,
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:  "format",
+				Usage: "output format (json, table)",
+				Value: "json",
+			},
+		},
 	}
 }
 
 func (rc *runCommand) action(c *cli.Context) error {
-	gh := github.New(c.Context, os.Getenv("GITHUB_TOKEN"))
+	gh, err := github.New(c.Context, os.Getenv("GITHUB_TOKEN"))
+	if err != nil {
+		return err
+	}
 	return run.Run(c.Context, os.Stdout, gh, &run.Param{ //nolint:wrapcheck
-		Org: c.Args().First(),
+		Org:    c.Args().First(),
+		Format: c.String("format"),
 	})
 }
