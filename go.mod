@@ -2,7 +2,7 @@ module github.com/suzuki-shunsuke/ghomfc
 
 go 1.23.0
 
-toolchain go1.24.1
+toolchain go1.24.2
 
 require (
 	github.com/mattn/go-colorable v0.1.14
