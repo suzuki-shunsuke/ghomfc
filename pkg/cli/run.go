@@ -6,7 +6,7 @@ import (
 
 	"github.com/suzuki-shunsuke/ghomfc/pkg/controller/run"
 	"github.com/suzuki-shunsuke/ghomfc/pkg/github"
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 )
 
 type runCommand struct {
