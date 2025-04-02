@@ -28,12 +28,12 @@ func (r *Runner) Run(ctx context.Context, args ...string) error {
 	if err != nil {
 		compiledDate = time.Now()
 	}
-	app := cli.App{
+	app := cli.Command{
 		Name:                 "ghomfc",
 		Usage:                "GitHub Organization Members' Followers Counter",
 		Version:              r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
 		Compiled:             compiledDate,
-		EnableBashCompletion: true,
+		EnableShellCompletion: true,
 		Commands: []*cli.Command{
 			(&versionCommand{}).command(),
 			(&runCommand{
@@ -46,5 +46,5 @@ func (r *Runner) Run(ctx context.Context, args ...string) error {
 		},
 	}
 
-	return app.RunContext(ctx, args) //nolint:wrapcheck
+	return app.Run(ctx, args) //nolint:wrapcheck
 }

@@ -33,7 +33,7 @@ $ ghomfc run <GitHub Organization Name>
 	}
 }
 
-func (rc *runCommand) action(c *cli.Context) error {
+func (rc *runCommand) action(ctx context.Context, c *cli.Command) error {
 	gh, err := github.New(c.Context, os.Getenv("GITHUB_TOKEN"))
 	if err != nil {
 		return fmt.Errorf("create a GitHub Client: %w", err)
