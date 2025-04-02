@@ -3,10 +3,9 @@ package cli
 import (
 	"context"
 	"io"
-	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 )
 
 type Runner struct {
@@ -24,16 +23,11 @@ type LDFlags struct {
 }
 
 func (r *Runner) Run(ctx context.Context, args ...string) error {
-	compiledDate, err := time.Parse(time.RFC3339, r.LDFlags.Date)
-	if err != nil {
-		compiledDate = time.Now()
-	}
-	app := cli.App{
-		Name:                 "ghomfc",
-		Usage:                "GitHub Organization Members' Followers Counter",
-		Version:              r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
-		Compiled:             compiledDate,
-		EnableBashCompletion: true,
+	app := cli.Command{
+		Name:                  "ghomfc",
+		Usage:                 "GitHub Organization Members' Followers Counter",
+		Version:               r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
+		EnableShellCompletion: true,
 		Commands: []*cli.Command{
 			(&versionCommand{}).command(),
 			(&runCommand{
@@ -46,5 +40,5 @@ func (r *Runner) Run(ctx context.Context, args ...string) error {
 		},
 	}
 
-	return app.RunContext(ctx, args) //nolint:wrapcheck
+	return app.Run(ctx, args) //nolint:wrapcheck
 }
