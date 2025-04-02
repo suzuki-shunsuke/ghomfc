@@ -1,6 +1,7 @@
 package cli
 
 import (
+	"context"
 	"fmt"
 	"os"
 
@@ -34,11 +35,11 @@ $ ghomfc run <GitHub Organization Name>
 }
 
 func (rc *runCommand) action(ctx context.Context, c *cli.Command) error {
-	gh, err := github.New(c.Context, os.Getenv("GITHUB_TOKEN"))
+	gh, err := github.New(ctx, os.Getenv("GITHUB_TOKEN"))
 	if err != nil {
 		return fmt.Errorf("create a GitHub Client: %w", err)
 	}
-	return run.Run(c.Context, os.Stdout, gh, &run.Param{ //nolint:wrapcheck
+	return run.Run(ctx, os.Stdout, gh, &run.Param{ //nolint:wrapcheck
 		Org:    c.Args().First(),
 		Format: c.String("format"),
 	})

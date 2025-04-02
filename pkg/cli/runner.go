@@ -3,7 +3,6 @@ package cli
 import (
 	"context"
 	"io"
-	"time"
 
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v3"
@@ -24,15 +23,10 @@ type LDFlags struct {
 }
 
 func (r *Runner) Run(ctx context.Context, args ...string) error {
-	compiledDate, err := time.Parse(time.RFC3339, r.LDFlags.Date)
-	if err != nil {
-		compiledDate = time.Now()
-	}
 	app := cli.Command{
-		Name:                 "ghomfc",
-		Usage:                "GitHub Organization Members' Followers Counter",
-		Version:              r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
-		Compiled:             compiledDate,
+		Name:                  "ghomfc",
+		Usage:                 "GitHub Organization Members' Followers Counter",
+		Version:               r.LDFlags.Version + " (" + r.LDFlags.Commit + ")",
 		EnableShellCompletion: true,
 		Commands: []*cli.Command{
 			(&versionCommand{}).command(),
