@@ -10,9 +10,7 @@ import (
 	"github.com/urfave/cli/v3"
 )
 
-type runCommand struct {
-	// logE *logrus.Entry
-}
+type runCommand struct{}
 
 func (rc *runCommand) command() *cli.Command {
 	return &cli.Command{
