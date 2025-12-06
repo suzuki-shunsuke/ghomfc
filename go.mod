@@ -5,7 +5,7 @@ go 1.25.5
 require (
 	github.com/shurcooL/githubv4 v0.0.0-20240727222349-48295856cce7
 	github.com/suzuki-shunsuke/slog-error v0.2.1
-	github.com/suzuki-shunsuke/slog-util v0.2.2
+	github.com/suzuki-shunsuke/slog-util v0.3.0
 	github.com/suzuki-shunsuke/urfave-cli-v3-util v0.1.0
 	github.com/urfave/cli/v3 v3.6.1
 	golang.org/x/oauth2 v0.33.0
