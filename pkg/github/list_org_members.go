@@ -50,7 +50,7 @@ func (c *Client) ListOrgMembers(ctx context.Context, org string) ([]*Member, err
 			} `graphql:"membersWithRole(first: 100, after: $cursor)"`
 		} `graphql:"organization(login: $org)"`
 	}
-	variables := map[string]interface{}{
+	variables := map[string]any{
 		"org":    githubv4.String(org),
 		"cursor": (*githubv4.String)(nil),
 	}
