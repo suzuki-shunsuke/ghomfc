@@ -1,5 +1,7 @@
 # ghomfc
 
+[MIT LICENSE](LICENSE) | [Install](INSTALL.md) | [Usage](USAGE.md)
+
 GitHub Organization Members' Followers Counter.
 
 ## Example
@@ -26,39 +28,9 @@ Rank | Login (Name) | Number of Followers
 9 | [Xunzhuo (Xunzhuo)](https://github.com/Xunzhuo) | 1193
 10 | [liggitt (Jordan Liggitt)](https://github.com/liggitt) | 1172
 
-## Install
-
-`ghomfc` is a single binary written in Go.
-So you only need to put the executable binary into `$PATH`.
-
-1. [Homebrew](https://brew.sh/)
-
-```sh
-brew install suzuki-shunsuke/ghomfc/ghomfc
-```
-
-2. [Scoop](https://scoop.sh/)
-
-```sh
-scoop bucket add suzuki-shunsuke https://github.com/suzuki-shunsuke/scoop-bucket
-scoop install ghomfc
-```
-
-3. [aqua](https://aquaproj.github.io/)
-
-```sh
-aqua g -i suzuki-shunsuke/ghomfc
-```
-
-4. Download a prebuilt binary from [GitHub Releases](https://github.com/suzuki-shunsuke/ghomfc/releases) and install it into `$PATH`
-
-5. Go
-
-```sh
-go install github.com/suzuki-shunsuke/ghomfc/cmd/ghomfc@latest
-```
-
 ## Usage
+
+See also [USAGEm.md](USAGE.md)
 
 ```sh
 ghomfc run [-format <json|table>] "<GitHub Organization name>"
