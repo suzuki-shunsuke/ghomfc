@@ -30,7 +30,7 @@ Rank | Login (Name) | Number of Followers
 
 ## Usage
 
-See also [USAGEm.md](USAGE.md)
+See also [USAGE.md](USAGE.md)
 
 ```sh
 ghomfc run [-format <json|table>] "<GitHub Organization name>"
