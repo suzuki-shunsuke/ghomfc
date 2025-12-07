@@ -221,33 +221,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v0.1.3/ghomfc_darwin_amd64.tar.gz",
-      "checksum": "847462EBC6A33FDCC1273FE3C11C43EEB63E6F66EFD683A08C5FBA3659C46734",
+      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v1.0.0/ghomfc_darwin_amd64.tar.gz",
+      "checksum": "04E5EBCA5461100A0486409F96411D6C15901E210880AC91689CF3602516A5FA",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v0.1.3/ghomfc_darwin_arm64.tar.gz",
-      "checksum": "B2424EED97F975687FBE52EB2B30E0E23C8A149ACDE48247DA4E67FA63C3CE0B",
+      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v1.0.0/ghomfc_darwin_arm64.tar.gz",
+      "checksum": "A996268BBDA2BC898567A852271E8246D8908A36B03B55C297BD61693D8F6B67",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v0.1.3/ghomfc_linux_amd64.tar.gz",
-      "checksum": "3E93EAFE31AD83B3BD72E92662D5FFD401D09E2268B2C6590E724351FFCF9589",
+      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v1.0.0/ghomfc_linux_amd64.tar.gz",
+      "checksum": "1DEEE2589107DC088471040EBF7577BA9FCC3E8408582DD62358116DB13CF89A",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v0.1.3/ghomfc_linux_arm64.tar.gz",
-      "checksum": "9FFF627D49FCEF4EFE8A9AED9C534A2E8880021C270AA77192FB500434971407",
+      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v1.0.0/ghomfc_linux_arm64.tar.gz",
+      "checksum": "9B0C7468684684D4B8CEF7BEF929EC5C69940C462C714AB699F1E191757A714B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v0.1.3/ghomfc_windows_amd64.zip",
-      "checksum": "DA7FF153786FCA528C59902032EA73E524E0D8B39BCBF1270300977BBDD07250",
+      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v1.0.0/ghomfc_windows_amd64.zip",
+      "checksum": "C02C51B4B5ED1521135FB2EF55224F4972728A6767C1DFCF58152F8E6D6F408C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v0.1.3/ghomfc_windows_arm64.zip",
-      "checksum": "72680964072EEA29CF4197C14413266EC32BBE892E1003ABC0AC1252D0317A24",
+      "id": "github_release/github.com/suzuki-shunsuke/ghomfc/v1.0.0/ghomfc_windows_arm64.zip",
+      "checksum": "30FD78F81E856F332BEB43F241B6D3C38DD9870F08C9CF67EEA652E82646132C",
       "algorithm": "sha256"
     },
     {
