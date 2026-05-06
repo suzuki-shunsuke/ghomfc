@@ -69,7 +69,7 @@ func (c *Client) ListOrgMembers(ctx context.Context, org string) ([]*Member, err
 		if !q.Organization.MembersWithRole.PageInfo.HasNextPage {
 			return members, nil
 		}
-		variables["cursor"] = githubv4.NewString(q.Organization.MembersWithRole.PageInfo.EndCursor)
+		variables["cursor"] = new(q.Organization.MembersWithRole.PageInfo.EndCursor)
 	}
 	return members, nil
 }
