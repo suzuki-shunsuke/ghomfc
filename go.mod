@@ -1,6 +1,6 @@
 module github.com/suzuki-shunsuke/ghomfc
 
-go 1.27.2
+go 1.27.3
 
 require (
 	github.com/shurcooL/githubv4 v0.0.0-20240727222349-48295856cce7
