@@ -11,7 +11,7 @@ USAGE:
    ghomfc [global options] [command [command options]]
 
 VERSION:
-   1.0.0
+   1.0.1
 
 COMMANDS:
    run         List a GitHub Organization members and sort them by the number of followers
@@ -53,7 +53,7 @@ NAME:
    ghomfc version - Show version
 
 USAGE:
-   ghomfc version
+   ghomfc version [options]
 
 OPTIONS:
    --json, -j  Output version in JSON format
@@ -68,7 +68,7 @@ NAME:
    ghomfc completion - Output shell completion script for bash, zsh, fish, or Powershell
 
 USAGE:
-   ghomfc completion
+   ghomfc completion [command [command options]]
 
 DESCRIPTION:
    Output shell completion script for bash, zsh, fish, or Powershell.
@@ -84,8 +84,70 @@ DESCRIPTION:
    ghomfc completion fish > ~/.config/fish/completions/ghomfc.fish
 
    # Powershell
-   Output the script to path/to/autocomplete/ghomfc.ps1 an run it.
+   Output the script to path/to/autocomplete/ghomfc.ps1 and run it.
 
+
+COMMANDS:
+   bash  Output bash completion script
+   zsh   Output zsh completion script
+   fish  Output fish completion script
+   pwsh  Output pwsh completion script
+
+OPTIONS:
+   --help, -h  show help
+```
+
+### completion bash
+
+```console
+$ completion bash --help
+NAME:
+   ghomfc completion bash - Output bash completion script
+
+USAGE:
+   ghomfc completion bash [options]
+
+OPTIONS:
+   --help, -h  show help
+```
+
+### completion zsh
+
+```console
+$ completion zsh --help
+NAME:
+   ghomfc completion zsh - Output zsh completion script
+
+USAGE:
+   ghomfc completion zsh [options]
+
+OPTIONS:
+   --help, -h  show help
+```
+
+### completion fish
+
+```console
+$ completion fish --help
+NAME:
+   ghomfc completion fish - Output fish completion script
+
+USAGE:
+   ghomfc completion fish [options]
+
+OPTIONS:
+   --help, -h  show help
+```
+
+### completion pwsh
+
+```console
+$ completion pwsh --help
+NAME:
+   ghomfc completion pwsh - Output pwsh completion script
+
+USAGE:
+   ghomfc completion pwsh [options]
 
 OPTIONS:
    --help, -h  show help
